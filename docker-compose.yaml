@@ -1,0 +1,18 @@
+name: commandes_bde
+
+services:
+  mysql:
+    image: mysql:latest
+    container_name: commandes_bde-mysql
+    ports:
+      - "3600:3600"
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_DATABASE: commandes
+        MYSQL_USER: ${DB_USER}
+        MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - data:/var/lib/mysql
+
+volumes:
+  data:
