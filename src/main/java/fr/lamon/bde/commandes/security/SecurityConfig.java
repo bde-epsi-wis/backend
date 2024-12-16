@@ -2,6 +2,7 @@ package fr.lamon.bde.commandes.security;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -15,6 +16,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration //Cette classe est une configuration
 @EnableWebSecurity //Spring Boot nous permet maintenant de modifier la configuration de sécurité
+@EnableMethodSecurity//Permet d'utiliser les annotations de sécurité
 public class SecurityConfig {
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
