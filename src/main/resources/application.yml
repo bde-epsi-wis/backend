@@ -11,3 +11,13 @@ spring:
         hibernate:
             ddl-auto: create-drop
         show-sql: true
+
+#ci-dessous le fichier au format .properties
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.datasource.url= ${DB_URL}
+#spring.datasource.username= ${DB_USER}
+#spring.datasource.password= ${DB_PASSWORD}
+#spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+#spring.jpa.hibernate.ddl-auto=create-drop
+#spring.jpa.show-sql=true
